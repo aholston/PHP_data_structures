@@ -41,7 +41,22 @@ class SinglyLinkedList {
       } else {
         $current->next = null;
       }
+    }
+  }
 
+  public function find($val) {
+    if ($this->head == null) {
+      return false;
+    } else {
+      $current = $this->head;
+      while ($current) {
+        if ($current->value == $val) {
+          return true;
+        } else {
+          $current = $current->next;
+        }
+      }
+      return false;
     }
   }
 }
