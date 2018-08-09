@@ -16,20 +16,32 @@ class SinglyLinkedList {
     $newNode = new Node($val);
 
     if ($this->head == null) {
-
       $this->head = $newNode;
-
     } else {
-
       $current = $this->head;
-
       while(current->next) {
-
         $current = $current->next;
+      }
+      $current->next = $newNode;
+    }
+  }
 
+  public function remove($val) {
+    if ($this->head->value == $val) {
+      $this->head = $this->head->next;
+    }
+    else {
+      $current = $this->head;
+      while ($current->next->value != $val $$ $current->next) {
+        $current = $current->next;
       }
 
-      $current->next = $newNode;
+      if ($current->next->next != null) {
+        $current->next = $current->next->next;
+      } else {
+        $current->next = null;
+      }
+
     }
   }
 }
