@@ -59,4 +59,12 @@ class SinglyLinkedList {
       return false;
     }
   }
+
+  public function printValues() {
+    $current = $this->head;
+    while ($current) {
+      echo $current->value . '<br>';
+      $current = $current->next;
+    }
+  }
 }
